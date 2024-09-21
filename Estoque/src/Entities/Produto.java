@@ -1,11 +1,13 @@
 package Entities;
 
 public class Produto {
+	//Atributos da classe:
 	private int id;
 	private String nome;
 	private double preco;
 	private int quantidade;
 	
+	//Construtores:
 	public Produto() {}
 	
 	public Produto(int id, String nome, double preco, int quantidade) {
@@ -14,7 +16,8 @@ public class Produto {
 		this.preco = preco;
 		this.quantidade = quantidade;
 	}
-
+	
+	//Getters e setters:
 	public int getId() {
 		return id;
 	}
@@ -54,10 +57,13 @@ public class Produto {
 	}
 	
 	@Override
+	//Compara dois objetos
 	public boolean equals(Object obj) {
+		//Verifica se os dois são iguais e caso sim retorna true
 		if (this == obj) {
 			return true;
 		}
+		//Verifica se o objeto é nulo ou de classe diferente
 		if (obj == null || getClass() != obj.getClass()) {
 			return false;
 		}
